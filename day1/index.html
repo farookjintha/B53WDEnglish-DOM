@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <button onclick="handleCreationOfElement()">Add New Element</button>
+    <button onclick="handleCreationOfAnchorElement()">
+      Add An Anchor Element
+    </button>
+
+    <button onclick="modifyStyle()">
+      Modify the styling of all div elements
+    </button>
+    <button onclick="accessAllDivAndChangeBorder()">
+      Modifiy the border of all div elements
+    </button>
+
+    <button onclick="useQuerySelector()">
+      Modify Element With Query Selector
+    </button>
+
+    <button onclick="useQuerySelectorAll()">
+      Modify Elements With Query Selector All
+    </button>
+
+    <h3>Using Class</h3>
+    <br />
+
+    <h1 class="heading1">Hey!</h1>
+    <h1 class="heading1">Hello!</h1>
+    <h1 class="heading1">Hi!</h1>
+
+    <h3>Using Id</h3>
+    <br />
+
+    <h1 id="heading2">How's your day!</h1>
+    <h1 id="heading2">Hope you're doing good!</h1>
+    <h1 id="heading2">Happy Weekend!</h1>
+
+    <h3>Using Tag</h3>
+    <br />
+    <h2>ABC</h2>
+    <h2>DEF</h2>
+    <h2>GHI</h2>
+
+    <div id="anchorContainer" class="anchorContainer"></div>
+
+    <!-- <a href="https://www.facebook.com" target="_blank">Facebook</a> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

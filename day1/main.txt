@@ -1,0 +1,35 @@
+DOM - Document Object Model
+
+
+document - the html page is considered as document in the form of object.
+
+document.getElementById();
+
+
+                    html
+
+             head            body
+
+meta link script style         div span h1
+                            div div div
+
+
+
+
+// to create an element -> document.createElement();
+// to add a html element inside a parent -> element.innerHTML = '';
+// to add any text inside an element -> element.innerText = ''
+// to append an element inside a parent -> element.appendChild();
+// to append any text inside a parent -> element.append();
+
+// to add a new attribute to the elment -> element.setAttribute();
+
+
+// to access the element by id -> document.getElementById();
+// to access the elements by classname -> document.getElementsByClassName();
+
+// to accessv the elements by tag name -> document.getElementsByTagName();
+
+
+// to access one element using id or class or tag -> querySelector();
+// to access multiple elements using id or class or tag -> querySelectorAll();
