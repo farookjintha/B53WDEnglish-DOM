@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    var myTimeout;
+    var myInterval;
+
+    function showDataAfterDelay() {
+      myTimeout = window.setTimeout(() => {
+        console.log("Calling setTimeout Function:");
+      }, 5000);
+    }
+
+    function showDataAtRegularInterval() {
+      myInterval = window.setInterval(() => {
+        console.log("Calling the setInterval Function:");
+      }, 1000);
+    }
+
+    function clickToClearTimeout() {
+      console.log(myTimeout);
+      clearTimeout(myTimeout);
+      console.log("Clearing the timeout: ", myTimeout);
+    }
+
+    function clickToClearInterval() {
+      console.log(myInterval);
+      clearInterval(myInterval);
+      console.log("Clearing the interval: ", myInterval);
+    }
+
+    function showDataImmediately() {
+      window.setImmediate(() => {
+        console.log("Calling the setImmediate Function:");
+      });
+    }
+  </script>
+  <body>
+    <button onclick="showDataAfterDelay()">
+      Click to show Data using setTimeout()
+    </button>
+
+    <button onclick="showDataAtRegularInterval()">
+      Click to show Data using setInterval()
+    </button>
+
+    <button onclick="clickToClearTimeout()">Clear Timeout</button>
+    <button onclick="clickToClearInterval()">Clear Interval</button>
+
+    <!-- <button onclick="showDataImmediately()">
+      Click to show Data using setImmediate()
+    </button> -->
+  </body>
+</html>

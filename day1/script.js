@@ -2,12 +2,12 @@ function handleCreationOfElement() {
   console.log("Creating a new element");
 
   const newDivElement = document.createElement("div"); // creating a new div element using createElement()
-  //   newDivElement.innerText = "New Div Element"; // adding content to the element
+  //   newDivElement.innerText = "<h1>New DIV Element</h1>"; // adding content to the element
   newDivElement.innerHTML = "<h1>New DIV Element</h1>";
   newDivElement.innerHTML += "<h2>New H2 Element</h2>";
   newDivElement.setAttribute("class", "myDivElement");
   document.body.appendChild(newDivElement); // attaching the element inside the body
-  //   document.body.append("<h2>Hello World</h2>");
+  // document.body.append("<h2>Hello World</h2>");
 }
 
 function handleCreationOfAnchorElement() {

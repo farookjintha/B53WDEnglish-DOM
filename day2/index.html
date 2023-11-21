@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    function showPopup() {
+      // window.alter('Hello')
+      alert("Hello world!");
+    }
+
+    function getConfirmation() {
+      // window.confirm();
+      let confirmation = confirm("Are you okay?");
+      console.log("Confirmation: ", confirmation);
+
+      if (confirmation) {
+        alert("That's nice to hear");
+      } else {
+        alert("Everything will be okay soon!");
+      }
+    }
+
+    function getData() {
+      const name = window.prompt("Whose birthday is this?");
+
+      if (name) {
+        alert(`Happy Birthday, ${name}!`);
+      }
+    }
+
+    function navigateTo() {
+      window.location.href = "https://www.facebook.com";
+    }
+
+    console.log("Height: ", innerHeight);
+    console.log("Width: ", innerWidth);
+
+    console.log("LOCATION: ", window.location);
+  </script>
+  <body>
+    <button onclick="showPopup()">Show Popup!</button>
+    <button onclick="getConfirmation()">Get Confirmation!</button>
+    <button onclick="getData()">Birthday Wish</button>
+    <button onclick="navigateTo()">Redirect to Facebook</button>
+  </body>
+</html>

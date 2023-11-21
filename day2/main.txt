@@ -1,0 +1,36 @@
+WINDOW - object used to access the browser window.
+
+Window object represents the browser.
+
+window.document; -> document
+window.alert(); -> alert()
+window.prompt(); -> prompt();
+
+window.history; -> history;
+
+
+window.innerHeight; -> innerHeight;
+window.innerWidth; -> innerWeight;
+
+
+window vs document
+
+window refers to the browser window;
+document refers to the HTML page in the browser.
+
+
+TIMER FUNCTION IN JS
+
+window.setInterval();
+window.setTimeout();
+window.setImmediate();
+
+// JS events:
+
+onclick;
+onload;
+onchange
+onmouseover;
+onmouseout;
+onkeydown;
+onsubmit;

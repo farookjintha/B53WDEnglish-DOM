@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .onloadContainer {
+        border: 1px solid red;
+        padding: 1em;
+        margin: 1em 0;
+      }
+
+      .onMouseOverElement {
+        height: 100px;
+        width: 200px;
+        border: 1px solid brown;
+      }
+    </style>
+  </head>
+  <body onload="triggerOnLoad()">
+    <button onclick="showData()">Click me</button>
+    <div class="onloadContainer">
+      OnLoad will be triggered, when this element is loaded / rendered
+    </div>
+
+    <input type="text" onchange="handleOnChange()" />
+    <input type="text" onkeydown="handleOnKeyDown()" />
+
+    <div class="onMouseOverElement" onmouseover="handleOnMouseOver()">
+      OnMouseOver
+    </div>
+
+    <script>
+      function showData() {
+        console.log("onClick Event is triggered!");
+      }
+
+      function triggerOnLoad() {
+        console.log("OnLoad Event is Triggered");
+      }
+
+      function handleOnChange() {
+        console.log("OnChange Event is Triggered!");
+      }
+
+      function handleOnKeyDown() {
+        console.log("OnKeyDown is triggered!");
+      }
+
+      function handleOnMouseOver() {
+        console.log("Mouse Over Event is triggered");
+      }
+    </script>
+  </body>
+</html>
