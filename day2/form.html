@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>User Registration:</h1>
+
+    <div>
+      <form onsubmit="handleRegister(event)" id="myForm">
+        <div>
+          <label>Name: </label>
+          <input id="name" type="text" placeholder="Enter the name" />
+        </div>
+
+        <div>
+          <label>Email: </label>
+          <input id="email" type="email" placeholder="Enter the email" />
+        </div>
+        <div>
+          <label>Password: </label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter the password"
+          />
+        </div>
+
+        <div>
+          <label>Mobile Number: </label>
+          <input
+            id="mobileNumber"
+            type="text"
+            placeholder="Enter the mobile number"
+          />
+        </div>
+        <div>
+          <label>Address: </label>
+          <input id="address" type="text" placeholder="Enter the address" />
+        </div>
+
+        <div>
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function handleRegister(event) {
+        event.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let mobileNumber = document.getElementById("mobileNumber").value;
+        let address = document.getElementById("address").value;
+
+        //name: name
+        let userInfo = {
+          name,
+          email,
+          password,
+          mobileNumber,
+          address,
+        };
+
+        console.log("User Info: ", userInfo);
+
+        let myForm = document.getElementById("myForm");
+        myForm.reset();
+      }
+    </script>
+  </body>
+</html>

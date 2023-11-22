@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .myDiv1 {
+        cursor: pointer;
+      }
+
+      .myDiv1:hover {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Task 1: Color the div element onmouseover</h2>
+    <div id="myDiv1" class="myDiv1">Hello</div>
+    <h1 onclick="getCoordinates(event)" style="cursor: pointer">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </h1>
+    <span id="coordinatesContainer"></span>
+    <br />
+
+    <div>
+      <h2>
+        Decimal to Binary :
+        <button onclick="convertDecimalToBinary()">Click to convert</button>
+      </h2>
+      <div id="decimalToBinary"></div>
+
+      <h2>
+        Decimal to Hexadecimal :
+        <button onclick="convertDecimalToHexa()">Click to convert</button>
+      </h2>
+      <div id="decimalToHexa"></div>
+    </div>
+
+    <textarea
+      id="textAreaElem"
+      onkeyup="getContentLength()"
+      placeholder="Enter some content..."
+    ></textarea>
+
+    <button onclick="showFullScreen()">Full Screen</button>
+    <button onclick="exitFullScreen()">Exit Full Screen</button>
+
+    <button onclick="getDataFromUser()">Get Data From User</button>
+
+    <div
+      style="width: 100px; height: 500px; border: 1px solid red; margin: 1em 0"
+    ></div>
+
+    <div
+      style="width: 100px; height: 500px; border: 1px solid red; margin: 1em 0"
+    ></div>
+
+    <div
+      style="width: 100px; height: 500px; border: 1px solid red; margin: 1em 0"
+    ></div>
+    <div
+      style="width: 100px; height: 500px; border: 1px solid red; margin: 1em 0"
+    ></div>
+    <div
+      style="width: 100px; height: 500px; border: 1px solid red; margin: 1em 0"
+    ></div>
+
+    <script>
+      function getDataFromUser() {
+        let name = prompt("What is your name?");
+        if (name) {
+          let mySpanElement = document.createElement("span");
+          mySpanElement.innerText = name;
+          document.body.appendChild(mySpanElement);
+        }
+      }
+
+      function getCoordinates(event) {
+        // console.log("PageX: ", event.pageX);
+        // console.log("PageY: ", event.pageY);
+        var X = event.clientX;
+        var Y = event.clientY;
+
+        // console.log("ClientX:", event.clientX);
+        // console.log("ClientY: ", event.clientY);
+
+        let myCoordinateSpan = document.getElementById("coordinatesContainer");
+        myCoordinateSpan.innerText = `Coordinates-> X: ${X}, Y: ${Y}`;
+      }
+
+      function getContentLength() {
+        let value = document.getElementById("textAreaElem").value;
+        console.log("Value: ", value);
+        console.log("Length: ", value.length);
+      }
+
+      function convertDecimalToBinary() {
+        let divElement = document.getElementById("decimalToBinary");
+        let decimal = 120;
+        divElement.innerHTML = decimal + " => " + decimal.toString(2); // binary Function
+      }
+      function convertDecimalToHexa() {
+        let divElement = document.getElementById("decimalToHexa");
+        let decimal = 120;
+        divElement.innerHTML = decimal + " => " + decimal.toString(16); // hexadecimal function
+      }
+
+      function showFullScreen() {
+        document.body.requestFullscreen();
+      }
+
+      function exitFullScreen() {
+        document.exitFullscreen();
+      }
+
+      //   function colorOnMouseOver() {
+      //     let myDiv = document.getElementById("myDiv1");
+
+      //     myDiv.style.color = "red";
+      //   }
+    </script>
+  </body>
+</html>

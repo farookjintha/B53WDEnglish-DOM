@@ -29,7 +29,11 @@
     <input type="text" onchange="handleOnChange()" />
     <input type="text" onkeydown="handleOnKeyDown()" />
 
-    <div class="onMouseOverElement" onmouseover="handleOnMouseOver()">
+    <div
+      class="onMouseOverElement"
+      onmouseover="handleOnMouseOver()"
+      onmouseout="handleOnMouseOut()"
+    >
       OnMouseOver
     </div>
 
@@ -52,6 +56,10 @@
 
       function handleOnMouseOver() {
         console.log("Mouse Over Event is triggered");
+      }
+
+      function handleOnMouseOut() {
+        console.log("Mouse Out Event is triggered");
       }
     </script>
   </body>
